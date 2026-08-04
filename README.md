@@ -1,14 +1,12 @@
 # GitLab Conflict Guard
 
-[![Release](https://img.shields.io/badge/release-v0.1.0-blue)](CHANGELOG.md) [![CI](https://github.com/OWNER/REPOSITORY/actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
+[![Release](https://img.shields.io/badge/release-v0.1.0-blue)](CHANGELOG.md) [![CI](https://github.com/KartikDotDev/Gitlab-Guardrails/actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
 
 GitLab Conflict Guard is a small Chrome extension that helps developers avoid GitLab's web conflict-resolution workflow. GitLab's web resolver can update the source branch by creating a merge commit from the target branch. This extension blocks **Resolve conflicts**, shows a clear warning, and directs developers to resolve conflicts locally instead.
 
 It is a workflow guardrail, not a security product.
 
 ![GitLab Conflict Guard blocking the Resolve conflicts action](assets/store/resolve-conflicts-screenshot.png)
-
-> Replace the `OWNER/REPOSITORY` badge target and the promotional-art placeholders before publishing.
 
 ## Installation
 
