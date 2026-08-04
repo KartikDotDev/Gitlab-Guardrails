@@ -1,0 +1,12 @@
+{
+  "name": "gitlab-conflict-guard",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "generate:assets": "node scripts/generate-assets.js",
+    "lint": "node scripts/lint.js",
+    "test": "node --test",
+    "build": "npm run generate:assets && node scripts/build.js",
+    "package": "npm run build && node scripts/package.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "allowedGitLabDomains": {
+      "title": "Allowed GitLab domains",
+      "description": "Exact GitLab hostnames controlled by the organization. When set, this policy overrides user domain settings.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
