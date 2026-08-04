@@ -1,3 +1,4 @@
 dist/
 *.crx
 output*
+scripts/generate-assets.js
