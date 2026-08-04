@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "GitLab Conflict Guard",
+  "name": "GitLab Guardrails",
   "version": "0.1.0",
   "description": "Blocks GitLab web conflict resolution and guides developers to resolve conflicts locally.",
   "permissions": ["storage", "scripting"],
