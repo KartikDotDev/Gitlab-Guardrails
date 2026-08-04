@@ -4,7 +4,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const root = path.join(__dirname, '..');
-const archive = path.join(root, 'dist', 'gitlab-conflict-guard-v0.1.0.zip');
+const { version } = require('../package.json');
+const archive = path.join(root, 'dist', `gitlab-conflict-guard-v${version}.zip`);
 
 function crc32(buffer) {
   let value = 0xffffffff;
