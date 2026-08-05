@@ -15,7 +15,8 @@ function pngDimensions(file) {
 if (manifest.manifest_version !== 3) throw new Error('Manifest V3 is required.');
 if (manifest.version !== '0.1.0') throw new Error('Release version must be 0.1.0.');
 if (!manifest.storage || manifest.storage.managed_schema !== 'policy-schema.json') throw new Error('Managed storage schema is missing.');
-if (policySchema.type !== 'object' || policySchema.additionalProperties !== false || !policySchema.properties.allowedGitLabDomains) throw new Error('Managed storage schema is invalid.');
+// Chrome's managed_schema parser rejects a boolean `additionalProperties`; it must be absent or a schema object.
+if (policySchema.type !== 'object' || typeof policySchema.additionalProperties === 'boolean' || !policySchema.properties.allowedGitLabDomains) throw new Error('Managed storage schema is invalid.');
 for (const size of requiredIcons) {
   const icon = manifest.icons && manifest.icons[size] && path.join(__dirname, '..', manifest.icons[size]);
   if (!icon || !fs.existsSync(icon)) throw new Error(`Missing ${size}px icon.`);
